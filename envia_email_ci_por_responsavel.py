@@ -40,6 +40,7 @@ def obter_dados_oracle():
         )
         SELECT pais, COUNT(*) AS total
         FROM paises_extraidos
+        WHERE pais <> 'CZ'
         GROUP BY pais
         ORDER BY total DESC
     """
